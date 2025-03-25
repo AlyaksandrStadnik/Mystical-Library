@@ -1,0 +1,9 @@
+.mystical-layout {
+  min-height: 100vh; /* Full viewport height */
+  background-image: url("/images/mystical-library.png");
+  background-position-x: center;
+  background-repeat: no-repeat; /* Prevent tiling */
+  background-color: rgba(245, 224, 80, 0.7);
+  position: relative; /* Ensure stacking context */
+  z-index: 0; /* Base layer for background */
+}

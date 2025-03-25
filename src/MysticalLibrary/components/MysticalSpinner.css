@@ -1,0 +1,19 @@
+.mystical-spinner-container {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+}
+
+.mystical-spinner .ant-spin-dot-item {
+  background-color: #3f2a1d; /* Shadowed Relic - darker brown for contrast */
+  border-radius: 50%;
+  box-shadow: 0 0 8px rgba(218, 165, 32, 0.8); /* Stronger Ethereal Flame glow */
+}
+.mystical-spinner .ant-spin {
+  background: radial-gradient(
+    circle,
+    rgba(245, 224, 80, 0.2),
+    transparent
+  ); /* Mist-Shrouded Glow fade */
+  border-radius: 10px;
+  border: 1px solid #6b4423; /* Ancient Tome border */
+}

@@ -1,0 +1,10 @@
+.mystical-footer {
+  background: linear-gradient(to right, #c19a6b, #daa520);
+  border-top: 1px solid #6b4423;
+  text-align: center;
+  font-family: "Georgia", serif;
+  font-size: 16px;
+  color: #0a0400;
+  text-shadow: 1px 1px 1px rgba(36, 34, 23, 0.5);
+  padding: 10px 0;
+}

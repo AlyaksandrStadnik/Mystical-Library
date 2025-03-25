@@ -1,0 +1,11 @@
+.mystical-content {
+  padding: 20px;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  flex-direction: column;
+  font-family: Georgia, serif;
+  position: relative; /* Ensure it sits above background */
+  text-shadow: 1px 1px 1px rgba(36, 34, 23, 0.5);
+}
