@@ -1,0 +1,33 @@
+.mystical-search-container {
+  background-color: transparent;
+  align-items: center;
+  width: 100%;
+}
+
+.mystical-search {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.mystical-search .ant-input {
+  font-size: 18px;
+  color: #6b4423; /* Ancient Tome - richer brown for contrast */
+  background-color: #f5e050; /* Mist-Shrouded Glow - foggy yellow */
+  border: 1px solid #6b4423; /* Ancient Tome - weathered brown */
+  border-radius: 6px 0 0 6px; /* Rounded left only */
+  padding: 8px 12px;
+  height: 40px; /* Match select height */
+}
+
+.mystical-search .ant-input:focus,
+.mystical-search .ant-input:hover {
+  border-color: #daa520;
+  box-shadow: 0 0 4px rgba(218, 165, 32, 0.5);
+}
+
+.mystical-search .ant-input-group-addon {
+  background: transparent; /* Remove default addon background */
+  border: none; /* Remove default border */
+  padding: 0; /* Remove default padding */
+}

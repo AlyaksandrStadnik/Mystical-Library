@@ -1,15 +1,13 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { BooksState } from "../utils/types";
 import { MY_BOOKS_LOCAL_STORAGE_KEY } from "../utils/constants";
+import { BooksState } from "../utils/types";
 
 const loadStateFromLocalStorage = () => {
   const serializedState = localStorage.getItem(MY_BOOKS_LOCAL_STORAGE_KEY);
 
   if (serializedState === null) return { myBooks: [] };
 
-  const deSerializedState = { myBooks: JSON.parse(serializedState) };
-
-  return deSerializedState;
+  return { myBooks: JSON.parse(serializedState) };
 };
 
 const initialState: BooksState = loadStateFromLocalStorage();
@@ -19,14 +17,12 @@ const booksSlice = createSlice({
   initialState,
   reducers: {
     addBook(state: BooksState, action) {
-      return { myBooks: [...state.myBooks, action.payload] };
+      state.myBooks.push(action.payload);
     },
     removeBook(state: BooksState, action) {
-      return {
-        myBooks: [...state.myBooks].filter(
-          (item) => item.title !== action.payload.title
-        ),
-      };
+      state.myBooks = state.myBooks.filter(
+        (item) => item.id !== action.payload.id
+      );
     },
   },
 });

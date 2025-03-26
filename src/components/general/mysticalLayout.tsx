@@ -5,16 +5,14 @@ import MysticalContent from "./mysticalContent";
 import "./Mysticallayout.css";
 import { Outlet } from "react-router-dom";
 
-const MysticalLayout = () => {
-  return (
-    <Layout className="mystical-layout">
-      <MysticalHeader />
-      <MysticalContent>
-        <Outlet />
-      </MysticalContent>
-      <MysticalFooter />
-    </Layout>
-  );
-};
+const MysticalLayout = () => (
+  <Layout className="mystical-layout">
+    <MysticalHeader />
+    <MysticalContent>
+      <Outlet />
+    </MysticalContent>
+    <MysticalFooter />
+  </Layout>
+);
 
 export default MysticalLayout;

@@ -1,28 +1,17 @@
 import { booksApi } from "../store/services/booksApi";
 
-export type BookListProps = {
-  source: Book[];
-  mode: Mode;
-};
-
-export type BookListItemProps = {
-  id: number;
-  title: string;
-  author: string;
-  status: string;
-  cover: string;
-  mode: Mode;
-};
-
 export type BookListHeaderProps = {
   mode: Mode;
 };
 
 export type BooksState = { myBooks: Book[] };
 
+export type SearchState = { searchType: string; searchInput: string };
+
 export type AppState = {
   books: BooksState;
-  booksApi: ReturnType<typeof booksApi.reducer>;
+  searchData: SearchState;
+  [booksApi.reducerPath]: ReturnType<typeof booksApi.reducer>;
 };
 
 export type Book = {
@@ -34,7 +23,7 @@ export type Book = {
 };
 
 export type BookInResponse = {
-  id: number;
+  key: number;
   author_name: string[];
   title: string;
   cover_i: number;
@@ -42,6 +31,7 @@ export type BookInResponse = {
 
 export type ResponseObject = {
   docs: BookInResponse[];
+  numFound: number;
 };
 
 export enum Mode {

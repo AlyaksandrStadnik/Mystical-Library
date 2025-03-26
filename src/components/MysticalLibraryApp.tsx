@@ -18,12 +18,10 @@ const browserRouter = createBrowserRouter([
   },
 ]);
 
-const MysticalLibraryApp = () => {
-  return (
-    <Provider store={booksStore}>
-      <RouterProvider router={browserRouter} />
-    </Provider>
-  );
-};
+const MysticalLibraryApp = () => (
+  <Provider store={booksStore}>
+    <RouterProvider router={browserRouter} />
+  </Provider>
+);
 
 export default MysticalLibraryApp;

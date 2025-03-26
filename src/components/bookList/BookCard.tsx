@@ -1,8 +1,16 @@
 import { Button, Card, Flex } from "antd";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import "./BookCard.css";
-import { BookListItemProps } from "../../utils/types";
+import { AppState, Mode } from "../../utils/types";
 import { resolveBookListItemButtonValues } from "../../utils/modeHelper";
+
+export type BookListItemProps = {
+  id: number;
+  title: string;
+  author: string;
+  status: string;
+  cover: string;
+};
 
 const BookListItem = ({
   id,
@@ -10,9 +18,12 @@ const BookListItem = ({
   author,
   status,
   cover,
-  mode,
 }: BookListItemProps) => {
+  const myBooks = useSelector((state: AppState) => state.books.myBooks);
   const dispatch = useDispatch();
+  const mode = myBooks.find((item) => item.id === id)
+    ? Mode.MY_BOOK_MODE
+    : Mode.ALL_BOOKS_MODE;
 
   const { buttonTitle, buttonAction } = resolveBookListItemButtonValues(mode);
 

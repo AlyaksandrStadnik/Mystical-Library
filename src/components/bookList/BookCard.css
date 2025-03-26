@@ -35,7 +35,6 @@
 }
 
 .mystical-card-title {
-  font-family: "Georgia", serif;
   font-size: 20px;
   color: #f5e050;
   text-shadow: 1px 1px 2px #3f2a1d;
@@ -43,7 +42,6 @@
 }
 
 .mystical-card-author {
-  font-family: "Georgia", serif;
   font-size: 18px;
   color: #c19a6b;
   margin: 0 0 10px 0;
@@ -67,14 +65,12 @@
 }
 
 .mystical-card-status {
-  font-family: "Georgia", serif;
   font-size: 16px;
   color: #daa520;
   margin: 0 0 15px 0;
 }
 
 .mystical-card-button {
-  font-family: "Georgia", serif;
   font-size: 16px;
   color: #3f2a1d;
   background-color: #f5e050;
