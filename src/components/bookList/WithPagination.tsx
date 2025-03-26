@@ -1,5 +1,6 @@
 import { Pagination } from "antd";
 import { PAGE_SIZE } from "../../utils/constants.ts";
+import "./WithPagination.css";
 
 type WithPagination = {
   page: number;
@@ -23,6 +24,7 @@ const WithPagination = ({
       current={page}
       total={total}
       onChange={onChange}
+      className="mystical-pagination"
     />
   </>
 );

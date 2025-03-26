@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { useSelector } from "react-redux";
 import { useGetBooksByQuery } from "../store/services/booksApi";
 import { PAGE_SIZE } from "../utils/constants.ts";
@@ -11,10 +11,13 @@ import MysticalSearch from "./MysticalSearch.tsx";
 import "./Home.css";
 
 const Home = () => {
-  const [page, setPage] = useState(0);
+  const [page, setPage] = useState(1);
   const { searchType, searchInput } = useSelector(
     (state: AppState) => state.searchData
   );
+  useEffect(() => {
+    if (page !== 1) setPage(1);
+  }, [searchType]);
 
   const params = useMemo(
     () => ({
@@ -41,11 +44,9 @@ const Home = () => {
     const total = data?.total || 0;
 
     return (
-      <>
-        <WithPagination page={page} total={total} onChange={setPage}>
-          <BookList source={items} />
-        </WithPagination>
-      </>
+      <WithPagination page={page} total={total} onChange={setPage}>
+        <BookList source={items} />
+      </WithPagination>
     );
   };
 

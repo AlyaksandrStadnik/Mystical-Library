@@ -17,7 +17,7 @@ type SearchParams = {
 const getSearchByParam = ({ searchBy, page, pageSize }: SearchParams) => {
   const searchParams = new URLSearchParams();
 
-  searchParams.append("page", String(page + 1));
+  searchParams.append("page", String(page));
   searchParams.append("limit", String(pageSize));
   if (searchBy.value !== "") searchParams.append(searchBy.type, searchBy.value);
 
@@ -29,7 +29,8 @@ const transformResponse = (response: ResponseObject) => ({
     id: item.key,
     author: item.author_name ? item.author_name.join(", ") : "Unknown Creator",
     title: item.title,
-    status: "",
+    status: "unread",
+    raiting: 0,
     cover: item.cover_i
       ? `https://covers.openlibrary.org/b/id/${item.cover_i}-M.jpg`
       : "/images/mystical-library.png",

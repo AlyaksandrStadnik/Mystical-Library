@@ -8,9 +8,10 @@ const searchSlice = createSlice({
   initialState,
   reducers: {
     setSearchData(state: SearchState, action) {
-      console.log(action.payload);
-      state.searchInput = action.payload?.searchInput || state.searchInput;
-      state.searchType = action.payload?.searchType || state.searchType;
+      const { searchInput = state.searchInput, searchType = state.searchType } =
+        action.payload;
+      state.searchInput = searchInput;
+      state.searchType = searchType;
     },
   },
 });

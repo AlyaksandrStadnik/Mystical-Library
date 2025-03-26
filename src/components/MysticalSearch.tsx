@@ -9,7 +9,9 @@ import "./MysticalSearch.css";
 
 const MysticalSearch = () => {
   const dispatch = useDispatch();
-  const { searchType } = useSelector((state: AppState) => state.searchData);
+  const { searchType, searchInput } = useSelector(
+    (state: AppState) => state.searchData
+  );
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     dispatch(setSearchData({ searchInput: e.target.value }));
@@ -33,6 +35,7 @@ const MysticalSearch = () => {
             onChange={onSearchTypeSelectorChange}
           />
         }
+        value={searchInput}
       />
     </div>
   );

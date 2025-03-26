@@ -18,8 +18,9 @@ export type Book = {
   id: number;
   author: string;
   title: string;
-  status: string;
+  status?: string;
   cover: string;
+  rating?: number;
 };
 
 export type BookInResponse = {

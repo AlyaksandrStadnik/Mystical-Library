@@ -12,11 +12,13 @@ const BookList = ({ source }: BookListProps) => (
       {source.map((item) => (
         <BookCard
           key={item.id}
-          id={item.id}
-          title={item.title}
-          author={item.author}
-          status={item.status}
-          cover={item.cover}
+          book={item}
+          // id={item.id}
+          // title={item.title}
+          // author={item.author}
+          // status={item.status}
+          // cover={item.cover}
+          // rating={item.rating}
         />
       ))}
     </div>

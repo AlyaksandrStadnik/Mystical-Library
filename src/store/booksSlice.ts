@@ -24,8 +24,16 @@ const booksSlice = createSlice({
         (item) => item.id !== action.payload.id
       );
     },
+    changeBookRating(state: BooksState, action) {
+      state.myBooks = state.myBooks.map((item) => {
+        if (action.payload.id === item.id) {
+          return { ...item, rating: action.payload.rating };
+        }
+        return item;
+      });
+    },
   },
 });
 
-export const { addBook, removeBook } = booksSlice.actions;
+export const { addBook, removeBook, changeBookRating } = booksSlice.actions;
 export const booksReducer = booksSlice.reducer;

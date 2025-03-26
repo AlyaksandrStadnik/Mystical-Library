@@ -1,0 +1,21 @@
+.mystical-rating {
+  margin: 10px 0 20px 0; /* Increase bottom margin for space above button */
+}
+
+.mystical-rating .ant-rate-star:not(.ant-rate-star-full) .ant-rate-star-second {
+  color: #c19a6b !important;
+}
+
+.mystical-rating .ant-rate-star {
+  color: #daa520;
+  font-size: 20px;
+}
+
+.mystical-rating .ant-rate-star:not(:last-child) {
+  margin-right: 6px; /* Spacing between stars */
+}
+
+.mystical-rating .ant-rate-star:hover,
+.mystical-rating .ant-rate-star-focused {
+  color: #daa520; /* Ethereal Flame - glowing yellow on hover/focus */
+}
