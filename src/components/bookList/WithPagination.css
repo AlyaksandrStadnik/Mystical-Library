@@ -4,20 +4,20 @@
 }
 
 .mystical-pagination .ant-pagination-item {
-  background-color: #f5e050; /* Mist-Shrouded Glow - foggy yellow */
-  border: 1px solid #6b4423; /* Ancient Tome - weathered brown */
+  background-color: #f5e050;
+  border: 1px solid #6b4423;
   border-radius: 4px;
   font-family: "Tannenberg-Bold", serif;
   font-size: 16px;
-  color: #3f2a1d; /* Shadowed Relic - dark brown */
+  color: #3f2a1d;
   transition: all 0.3s ease-in-out;
 }
 
 .mystical-pagination .ant-pagination-item:hover,
 .mystical-pagination .ant-pagination-item:focus {
-  background-color: #daa520; /* Ethereal Flame - glowing yellow */
-  border-color: #3f2a1d; /* Shadowed Relic - darker border */
-  color: #6b4423; /* Ancient Tome - weathered brown */
+  background-color: #daa520;
+  border-color: #3f2a1d;
+  color: #6b4423;
 }
 
 .mystical-pagination .ant-pagination-item-active {

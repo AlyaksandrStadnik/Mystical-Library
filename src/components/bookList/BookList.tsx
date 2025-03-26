@@ -10,16 +10,7 @@ const BookList = ({ source }: BookListProps) => (
   <>
     <div className="mystical-booklist-container">
       {source.map((item) => (
-        <BookCard
-          key={item.id}
-          book={item}
-          // id={item.id}
-          // title={item.title}
-          // author={item.author}
-          // status={item.status}
-          // cover={item.cover}
-          // rating={item.rating}
-        />
+        <BookCard key={item.id} book={item} />
       ))}
     </div>
   </>

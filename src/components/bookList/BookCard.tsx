@@ -6,12 +6,6 @@ import MysticalRating from "./MysticalRating";
 import "./BookCard.css";
 
 export type BookCardProps = {
-  // id: number;
-  // title: string;
-  // author: string;
-  // status?: string;
-  // cover: string;
-  // rating?: number;
   book: Book;
 };
 
