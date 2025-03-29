@@ -9,18 +9,19 @@ import "./MysticalSearch.css";
 
 const MysticalSearch = () => {
   const dispatch = useDispatch();
-  const { searchType, searchInput } = useSelector(
+  const { searchType, searchValue } = useSelector(
     (state: AppState) => state.searchData
   );
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    dispatch(setSearchData({ searchInput: e.target.value }));
+    dispatch(setSearchData({ searchValue: e.target.value }));
   };
 
   const onSearchTypeSelectorChange = (type: string) => {
     dispatch(setSearchData({ searchType: type }));
   };
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   const debounceCallback = useMemo(() => debounce(handleInputChange, 500), []);
 
   return (
@@ -35,7 +36,7 @@ const MysticalSearch = () => {
             onChange={onSearchTypeSelectorChange}
           />
         }
-        value={searchInput}
+        defaultValue={searchValue}
       />
     </div>
   );

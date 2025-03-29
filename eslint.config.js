@@ -19,11 +19,11 @@ export default tseslint.config(
     },
     rules: {
       ...reactHooks.configs.recommended.rules,
-      "arrow-body-style": ["error", "as-needed"],
       "react-refresh/only-export-components": [
         "warn",
         { allowConstantExport: true },
       ],
+      "arrow-body-style": ["error", "as-needed"],
     },
   }
 );

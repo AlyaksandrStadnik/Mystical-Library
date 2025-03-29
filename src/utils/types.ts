@@ -6,7 +6,7 @@ export type BookListHeaderProps = {
 
 export type BooksState = { myBooks: Book[] };
 
-export type SearchState = { searchType: string; searchInput: string };
+export type SearchState = { searchType: string; searchValue: string };
 
 export type AppState = {
   books: BooksState;

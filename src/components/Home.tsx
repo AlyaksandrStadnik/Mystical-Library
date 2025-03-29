@@ -12,20 +12,21 @@ import "./Home.css";
 
 const Home = () => {
   const [page, setPage] = useState(1);
-  const { searchType, searchInput } = useSelector(
+  const { searchType, searchValue } = useSelector(
     (state: AppState) => state.searchData
   );
+
   useEffect(() => {
-    if (page !== 1) setPage(1);
-  }, [searchType]);
+    setPage(1);
+  }, [searchType, searchValue]);
 
   const params = useMemo(
     () => ({
-      searchBy: { type: searchType, value: searchInput },
+      searchBy: { type: searchType, value: searchValue },
       page,
       pageSize: PAGE_SIZE,
     }),
-    [page, searchInput, searchType]
+    [page, searchValue, searchType]
   );
 
   const { data, isFetching } = useGetBooksByQuery(params);
